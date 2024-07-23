@@ -4,9 +4,11 @@ const server = index.create();
 const router = index.router('db.json');
 const middlewares = index.defaults();
 
+const PORT = process.env.JSON_SERVER_PORT || 8080;
+
 server.use(middlewares);
 server.use('/api', router);
-// eslint-disable-next-line no-undef
-server.listen(process.env.JSON_SERVER_PORT || 3000, () => {
-  console.log('JSON Server is running');
+
+server.listen(PORT, () => {
+  console.log(`JSON Server is running on port ${PORT}`);
 });
