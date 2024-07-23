@@ -1,1 +1,1 @@
-web: ts-node-esm server.ts
+web: node json-server.js
