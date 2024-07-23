@@ -1,1 +1,1 @@
-web: node json-server.js
+web: node index.js

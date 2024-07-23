@@ -1,8 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const jsonServer = require('json-server');
-const server = jsonServer.create();
-const router = jsonServer.router('db.json');
-const middlewares = jsonServer.defaults();
+const index = require('json-server');
+const server = index.create();
+const router = index.router('db.json');
+const middlewares = index.defaults();
 
 server.use(middlewares);
 server.use('/api', router);
