@@ -4,7 +4,7 @@ const server = index.create();
 const router = index.router('db.json');
 const middlewares = index.defaults();
 
-const PORT = process.env.JSON_SERVER_PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 server.use(middlewares);
 server.use('/api', router);
